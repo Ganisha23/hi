@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color:#3498db;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+        .quiz-card {
+            border: 10px;
+            margin: 1rem auto;
+            padding: 1.5rem;
+            max-width: 500px;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+        }
+        .quiz-card button {
+            background-color:#3498db;
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .quiz-card button:hover {
+            background-color: #45a049;
+        }
+        .instructions {
+            text-align: left;
+            margin: 1rem 0;
+        }
+        .instructions li {
+            margin: 0.5rem 0;
+        }
+        
+.nav-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: white;
+    border: none;
+    width: 120px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #3498db; /* Correct box-shadow */
+    text-align: center;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #2ecc71;
+    color:#f0f0f0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Online Quiz!</h1>
+    </header>
+    <main>
+        <section class="quiz-card">
+            <h2>Test Your Knowledge</h2>
+            <p>Challenge yourself with our fun and engaging quizzes!</p>
+           
+            <h2>Instructions</h2>
+            <ul class="instructions">
+                <li>Read each question carefully before answering.</li>
+                <li>You can choose only one answer per question.</li>
+                <li>There is no time limit, so take your time.</li>
+                <li>Your score will be displayed at the end of the quiz.</li>
+                <li>Click "Start Quiz" to begin.</li>
+            </ul>
+            <button class="nav-button"><a href ="index.html"  style="text-decoration: none; color: white;">Start</a></button>
+
+        </section>
+    </main>
+
+    <script>
+        function startQuiz() {
+            window.location.href = "quiz.html"; // Redirect to the quiz page
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Submission</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .quiz-container {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 500px;
+            background: #fff;
+            box-shadow: 0 0 20px #3498db; 
+
+            border-radius: 8px;
+        }
+        .circle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 20px auto;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #4CAF50;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            visibility: hidden;
+        }
+        .submit-button {
+            background: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Quiz</h1>
+        <form id="quizForm">
+            <div>
+                <p>1. What is 2 + 2?</p>
+                <label><input type="radio" name="q1" value="4"> 4</label>
+                <label><input type="radio" name="q1" value="3"> 3</label>
+            </div>
+            <div>
+                <p>2. What is the capital of France?</p>
+                <label><input type="radio" name="q2" value="Paris"> Paris</label>
+                <label><input type="radio" name="q2" value="London"> London</label>
+            </div>
+            <div>
+                <p>3. Which is the largest planet in the solar system?</p>
+                <label><input type="radio" name="q3" value="Jupiter"> Jupiter</label>
+                <label><input type="radio" name="q3" value="Mars"> Mars</label>
+            </div>
+            <div>
+                <p>4. What is 10 / 2?</p>
+                <label><input type="radio" name="q4" value="5"> 5</label>
+                <label><input type="radio" name="q4" value="6"> 6</label>
+            </div>
+            <div>
+                <p>5. Which is the smallest prime number?</p>
+                <label><input type="radio" name="q5" value="2"> 2</label>
+                <label><input type="radio" name="q5" value="1"> 1</label>
+            </div>
+            <button type="button" class="submit-button" onclick="calculateScore()">Submit</button>
+        </form>
+        <div id="result" class="circle"></div>
+    </div>
+
+    <script>
+        function calculateScore() {
+            const correctAnswers = {
+                q1: "4",
+                q2: "Paris",
+                q3: "Jupiter",
+                q4: "5",
+                q5: "2"
+            };
+
+            let score = 0;
+            const form = document.getElementById('quizForm');
+
+            for (const [question, answer] of Object.entries(correctAnswers)) {
+                const userAnswer = form.elements[question].value;
+                if (userAnswer === answer) {
+                    score++;
+                }
+            }
+
+            const resultDiv = document.getElementById('result');
+            resultDiv.textContent = `${score} / 5`;
+            resultDiv.style.visibility = 'visible';
+        }
+    </script>
+</body>
+</html>

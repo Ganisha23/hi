@@ -1,0 +1,49 @@
+/* Styles for the Apply Page */
+.apply-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.apply-container h1 {
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.apply-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.apply-container label {
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+.apply-container input[type="text"],
+.apply-container input[type="email"],
+.apply-container input[type="file"] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    width: calc(100% - 22px); /* Adjust width considering padding */
+}
+
+.apply-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.apply-container button:hover {
+    background: #0056b3;
+}
